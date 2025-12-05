@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Di_room</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="main_style.css" />
+</head>
+
+<body>
+
+    <!-- ▣ 헤더 -->
+    <header id="background">
+        <a href="#" class="logo-link">
+            <img src="diroom_text.png" alt="Di_Room 로고" id="main_logo" />
+        </a>
+
+        <div id="menu-toggle">&#9776;</div>
+
+        <nav id="menu">
+            <div id="menu-close">✕</div>  <!-- ← 추가된 부분 -->
+                <a href="#about">소개</a>
+                <a href="#products">제품</a>
+                <a href="#story">스토리</a>
+                <a href="#contact">오시는 길</a>
+        </nav>
+
+<!-- 메뉴 바깥 클릭 영역(오버레이) 추가) -->
+<div id="menu-overlay"></div>
+
+
+        <div id="icon-container">
+            <a href="#"><img src="search.png" alt="검색" /></a>
+            <a href="#"><img src="client.png" alt="고객센터" /></a>
+        </div>
+    </header>
+
+    <!-- ▣ 슬라이더 -->
+    <section id="slider-container">
+        <div id="slider">
+            <img src="베른.jpg" class="slide-img" alt="Sofa 1">
+            <img src="엔젤.jpg" class="slide-img" alt="Sofa 2">
+            <img src="블링.jpg" class="slide-img" alt="Sofa 3">
+            <img src="헨지.jpg" class="slide-img" alt="Sofa 4">
+            <img src="모듈2.jpg" class="slide-img" alt="Sofa 5">
+            <img src="코바.jpg" class="slide-img" alt="Sofa 6">
+        </div>
+
+        <button id="prevBtn" class="slide-btn">〈</button>
+        <button id="nextBtn" class="slide-btn">〉</button>
+    </section>
+
+    <!-- ▣ 소개 -->
+    <section id="about">
+        <h1 class="fade-up">Di_room</h1>
+        <p class="fade-up">
+            Di_room은 감각적인 디자인과 편안함을 기반으로 한 프리미엄 소파 브랜드입니다.<br>
+            우리는 단순한 가구를 넘어 당신의 공간을 완성하는 라이프스타일을 제공합니다.
+        </p>
+
+        <div class="about-features">
+            <div class="feature-box fade-up">
+                <h3>✔ Premium Quality</h3>
+                <p>엄선된 소재와 전문 제작 공정을 통해 최고 품질을 제공합니다.</p>
+            </div>
+
+            <div class="feature-box fade-up">
+                <h3>✔ Modern Design</h3>
+                <p>어떤 공간에도 조화롭게 어울리는 모던한 디자인.</p>
+            </div>
+
+            <div class="feature-box fade-up">
+                <h3>✔ Customized Service</h3>
+                <p>색상, 원단, 사이즈까지 고객 맞춤 제작 가능.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ▣ 갤러리 -->
+    <section id="gallery">
+        <h2 class="fade-up">Gallery</h2>
+
+        <div class="gallery-container">
+            <img src="갤러리1.jpg" class="fade-up" alt="gallery1">
+            <img src="갤러리2.jpg" class="fade-up" alt="gallery2">
+            <img src="갤러리3.jpg" class="fade-up" alt="gallery3">
+        </div>
+    </section>
+
+    <!-- ▣ 스토리 -->
+    <section id="story">
+        <h2 class="fade-up">Our Story</h2>
+        <p class="fade-up">
+            Di_room은 단순한 가구 제조를 넘어 고객의 공간을 더 아름답고 편안하게 만드는 것을 목표로 합니다.<br><br>
+            우리는 “좋은 디자인은 삶을 바꾼다”는 신념으로 더 나은 제품을 만들기 위해 계속 연구하고 발전하고 있습니다.
+        </p>
+    </section>
+
+    <!-- ▣ 오시는 길 -->
+    <section id="contact">
+        <h2 class="fade-up">오시는 길</h2>
+        <iframe
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3173.6099544578437!2d127.24857657631401!3d37.30437703911673!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357b54568e188e13%3A0x6754b354781aea75!2z6rK96riw64-EIOyaqeyduOyLnCDsspjsnbjqtawg66qo7ZiE7J2NIOy0iO2VmOuhnCA0Mi0x!5e0!3m2!1sko!2skr!4v1764852825284!5m2!1sko!2skr"
+  width="100%"
+  height="350"
+  style="border:0; border-radius:15px;"
+  allowfullscreen=""
+  loading="lazy"
+  referrerpolicy="no-referrer-when-downgrade">
+</iframe>
+
+    </section>
+
+    <!-- JS -->
+    <script src="motion.js"></script>
+
+</body>
+</html>
