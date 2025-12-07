@@ -1,0 +1,34 @@
+/* 외부 폰트 : Cafe24Surround */
+@font-face {
+    font-family: 'Cafe24Surround';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24Ssurround.woff')
+        format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* 기본 폰트 */
+body {
+    font-family: 'Cafe24Surround', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 전역 배경 */
+body {
+    background: #ffffff;
+    overflow-x: hidden;
+}
+
+/* 공통 텍스트 */
+h2 {
+    text-align: center;
+    margin-top: 80px;
+    font-size: 28px;
+    font-weight: 600;
+}

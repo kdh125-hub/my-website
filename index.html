@@ -6,7 +6,11 @@
     <title>Di_room</title>
 
     <!-- CSS -->
-    <link rel="stylesheet" href="main_style.css" />
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="layout.css">
+    <link rel="stylesheet" href="product.css">
+    <link rel="stylesheet" href="modal.css">
+
 </head>
 
 <body>
@@ -22,7 +26,7 @@
         <nav id="menu">
             <div id="menu-close">✕</div>  <!-- ← 추가된 부분 -->
                 <a href="#about">소개</a>
-                <a href="#products">제품</a>
+                <a href="#product-section">제품</a>
                 <a href="#story">스토리</a>
                 <a href="#contact">오시는 길</a>
         </nav>
@@ -52,8 +56,24 @@
         <button id="nextBtn" class="slide-btn">〉</button>
     </section>
 
+    <!--▣ 제품섹션-->
+    <section id="product-section">
+    <div id="main-category" class="category-bar">
+        <button data-category="all" class="active">전체보기</button>
+        <button data-category="sofa">소파</button>
+        <button data-category="bed">침대</button>
+    </div>
+
+    <div id="sub-category" class="category-bar" style="display:none;"></div>
+
+    <div id="product-list" class="product-grid fade-up"></div>
+</section>
+
+
     <!-- ▣ 소개 -->
     <section id="about">
+    <div class="section-inner">
+
         <h1 class="fade-up">Di_room</h1>
         <p class="fade-up">
             Di_room은 감각적인 디자인과 편안함을 기반으로 한 프리미엄 소파 브랜드입니다.<br>
@@ -76,40 +96,71 @@
                 <p>색상, 원단, 사이즈까지 고객 맞춤 제작 가능.</p>
             </div>
         </div>
-    </section>
+
+    </div>
+</section>
+
 
     <!-- ▣ 갤러리 -->
     <section id="gallery">
+    <div class="section-inner">
         <h2 class="fade-up">Gallery</h2>
 
         <div class="gallery-container">
-            <img src="갤러리1.jpg" class="fade-up" alt="gallery1">
-            <img src="갤러리2.jpg" class="fade-up" alt="gallery2">
-            <img src="갤러리3.jpg" class="fade-up" alt="gallery3">
+            <img src="제작과정1.jpg" class="fade-up" alt="제작과정1">
+            <img src="제작과정2.jpg" class="fade-up" alt="제작과정2">
+            <img src="제작과정3.jpg" class="fade-up" alt="제작과정3">
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- ▣ 스토리 -->
-    <section id="story">
-        <h2 class="fade-up">Our Story</h2>
-        <p class="fade-up">
-            Di_room은 단순한 가구 제조를 넘어 고객의 공간을 더 아름답고 편안하게 만드는 것을 목표로 합니다.<br><br>
-            우리는 “좋은 디자인은 삶을 바꾼다”는 신념으로 더 나은 제품을 만들기 위해 계속 연구하고 발전하고 있습니다.
+
+<!-- STORY SECTION -->
+<section id="story" class="section">
+    <div class="section-inner story-box">
+        <h2>Our Story</h2>
+        <p>
+            Di_room은 단순한 가구 제조를 넘어 고객의 공간을 더욱 아름답고 편안하게 만드는 것을 목표로 합니다.
         </p>
-    </section>
+        <p>
+            우리는 “좋은 디자인은 삶을 바꾼다”는 신념으로 더 나은 제품을 만들기 위해
+            계속 연구하고 발전하고 있습니다.
+        </p>
+    </div>
+</section>
+
+
+
+    <!-- ▣ 세스코 인증 -->
+<section id="cesco">
+    <div class="section-inner">
+        <div class="cesco-box fade-up">
+            <img src="cesco.png" alt="CESCO Logo" class="cesco-logo">
+            <h2>세스코 안심케어 등록업체</h2>
+            <p>
+                Di_room은 세스코의 위생 안전 기준을 준수하여  
+                고객 여러분께 더욱 믿을 수 있는 제품과 서비스를 제공합니다.
+            </p>
+        </div>
+    </div>
+</section>
+
+
 
     <!-- ▣ 오시는 길 -->
     <section id="contact">
+        <div class="section-inner">
         <h2 class="fade-up">오시는 길</h2>
         <iframe
-  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3173.6099544578437!2d127.24857657631401!3d37.30437703911673!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357b54568e188e13%3A0x6754b354781aea75!2z6rK96riw64-EIOyaqeyduOyLnCDsspjsnbjqtawg66qo7ZiE7J2NIOy0iO2VmOuhnCA0Mi0x!5e0!3m2!1sko!2skr!4v1764852825284!5m2!1sko!2skr"
-  width="100%"
-  height="350"
-  style="border:0; border-radius:15px;"
-  allowfullscreen=""
-  loading="lazy"
-  referrerpolicy="no-referrer-when-downgrade">
-</iframe>
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3173.6099544578437!2d127.24857657631401!3d37.30437703911673!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357b54568e188e13%3A0x6754b354781aea75!2z6rK96riw64-EIOyaqeyduOyLnCDsspjsnbjqtawg66qo7ZiE7J2NIOy0iO2VmOuhnCA0Mi0x!5e0!3m2!1sko!2skr!4v1764852825284!5m2!1sko!2skr"
+            width="100%"
+            height="350"
+            style="border:0; border-radius:15px;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </div>
 
     </section>
 
