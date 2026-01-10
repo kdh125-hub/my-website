@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="고객님을 위한 프리미엄 맞춤제작 소파 브랜드">
+    <meta name="keywords" content="소파, sofa, 쇼파, 침대, bed, 맞춤제작">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <title>Di_room</title>
 
     <!-- CSS -->
@@ -17,7 +20,7 @@
 
     <!-- ▣ 헤더 -->
     <header id="background">
-        <a href="#" class="logo-link">
+        <a href="index.html" class="logo-link">
             <img src="diroom_text.png" alt="Di_Room 로고" id="main_logo" />
         </a>
 
@@ -36,21 +39,57 @@
 
 
         <div id="icon-container">
-            <a href="#"><img src="search.png" alt="검색" /></a>
-            <a href="#"><img src="client.png" alt="고객센터" /></a>
+            <a href="#" id="search-btn">
+                <img src="search.png" alt="검색">
+            </a>
+            <div id="search-overlay">
+    <div class="search-inner">
+        <button id="search-close">✕</button>
+
+        <input
+            type="text"
+            id="search-input"
+            placeholder="제품명 또는 카테고리를 검색하세요">
+
+            <div class="search-hint">예) 소파, 침대, 엔젤, 베른</div>
+
+            <!-- ✅ 카테고리 버튼 -->
+        <div class="search-category">
+            <button data-category="all" class="active">전체</button>
+            <button data-category="sofa">소파</button>
+            <button data-category="bed">침대</button>
+        </div>
+
+        <!-- ✅ 최근 검색어 -->
+        <div class="recent-header">
+            <span>최근 검색어</span>
+            <button id="clear-recent">전체삭제</button>
+        </div>
+        <ul id="recent-keywords"></ul>
+
+
+        <!-- ✅ 검색 결과 리스트 -->
+        <ul id="search-result"></ul>
+    </div>
+</div>
+
+            <a href="client.html">
+                <img src="client.png" alt="고객센터">
+            </a>
         </div>
     </header>
 
     <!-- ▣ 슬라이더 -->
     <section id="slider-container">
         <div id="slider">
-            <img src="베른.jpg" class="slide-img" alt="Sofa 1">
+            <img src="베른7.jpg" class="slide-img" alt="Sofa 1">
             <img src="엔젤3.jpg" class="slide-img" alt="Sofa 2">
-            <img src="블링3.jpg" class="slide-img" alt="Sofa 3">
+            <img src="블링.jpg" class="slide-img" alt="Sofa 3">
             <img src="헨지2.jpg" class="slide-img" alt="Sofa 4">
             <img src="모듈2.jpg" class="slide-img" alt="Sofa 5">
             <img src="코바6.jpg" class="slide-img" alt="Sofa 6">
-            <img src="K1.jpg" class="slide-img" alt="Sofa 7">
+            <img src="킹덤2.jpg" class="slide-img" alt="Sofa 7">
+            <img src="K1.jpg" class="slide-img" alt="Sofa 8">
         </div>
 
         <button id="prevBtn" class="slide-btn">〈</button>
@@ -180,6 +219,45 @@
     </div>
 </div>
 
+<button id="back-to-top" title="Top">
+  <i class="fas fa-arrow-up"></i>
+</button>
+
+<footer class="site-footer">
+  <div class="footer-container">
+    <h1 class="footer-logo">Di_room</h1>
+    
+    <div class="footer-row">
+      <span>대표자 : 김인호</span>
+        <span class="divider"></span>
+      <span>연락처 : 010-3391-0203</span>
+      <span class="divider"></span>
+      <span class="bank-info">입금계좌 - 농협 <br><span class="divider2"></span>356-1400-1685-03</span>
+    </div>
+
+    <div class="footer-row">
+      <span>주소 : 경기 용인시 처인구 모현읍 초하로 42-1(다동)</span>
+      <span class="divider"></span>
+    </div>
+
+    <div class="footer-row">
+      <span>팩스번호 : 031-339-1225</span>
+      <span class="divider"></span>
+      <span>전화번호 : 031-338-1225</span>
+    </div>
+
+    <div class="footer-row">
+      <span class="email-info"><i class="fas fa-envelope"></i> diroomoffice@gmail.com</span>
+    </div>
+
+    <div class="footer-sns">
+        <a href="https://www.instagram.com/di.room_office?igsh=MXJ3ZTZ5M2Myb2U2bQ==" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="유튜브링크" target="_blank"><i class="fab fa-youtube"></i></a>
+      </div>
+
+    <p class="copyright">&copy; 2026 Di_room. All Rights Reserved.</p>
+  </div>
+</footer>
 
     <!-- JS -->
     <script src="motion.js"></script>

@@ -32,3 +32,112 @@ h2 {
     font-size: 28px;
     font-weight: 600;
 }
+.site-footer {
+  background-color: #f8f9fa; /* 배경색 (밝은 회색) */
+  color: #333;
+  padding: 40px 20px;
+  border-top: 1px solid #ddd;
+  font-family: 'Cafe24Surround', sans-serif;
+  line-height: 1.8;
+}
+
+.footer-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.footer-logo {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #000;
+}
+
+.footer-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+/* 간격을 위한 밑줄 효과 또는 공백 */
+.divider {
+  width: 300px;
+  height: 1px;
+  background-color: #f8f9fa;
+  margin: 0 15px;
+}
+.divider2 {
+  width: 50%;
+  height: 1px;
+  background-color: #f8f9fa;
+  margin: 0 15px;
+}
+
+.bank-info {
+  font-weight: bold;
+}
+
+.footer-sns a {
+  font-size: 20px;
+  margin-left: 15px;
+  color: #333;
+  transition: 0.3s;
+}
+
+.footer-sns a:hover {
+  color: #e4405f; /* 마우스 올렸을 때 색상(인스타 핑크) */
+}
+
+.email-info i {
+  margin-right: 5px;
+}
+
+.copyright {
+  margin-top: 30px;
+  font-size: 12px;
+  color: #999;
+}
+
+/* 모바일 대응: 화면이 좁아지면 가로 정렬을 해제합니다 */
+@media (max-width: 768px) {
+  .footer-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .divider {
+    display: none; /* 모바일에선 구분선 제거 */
+  }
+}
+#back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: #333;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 50%;
+  font-size: 18px;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+
+  /* 서서히 나타나게 하는 핵심 설정 */
+  opacity: 0;           /* 처음엔 투명하게 */
+  visibility: hidden;   /* 클릭되지 않게 숨김 */
+  transition: opacity 0.4s, visibility 0.4s, transform 0.3s; /* 0.4초 동안 변화 */
+}
+
+/* 버튼이 활성화되었을 때 적용될 클래스 */
+#back-to-top.show {
+  opacity: 1;           /* 불투명하게 */
+  visibility: visible;  /* 보이게 */
+}
+
+#back-to-top:hover {
+  background-color: #555;
+  transform: translateY(-5px);
+}
