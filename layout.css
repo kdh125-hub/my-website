@@ -403,6 +403,9 @@ margin-bottom: 90px;}
     color: #444;
     max-width: 650px;
 }
+#footer {
+    background-color: #8b7a52;
+}
 
 @media (max-width: 700px) {
     .cesco-box { padding: 35px 20px; }

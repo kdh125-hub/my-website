@@ -126,3 +126,250 @@
     }
     .product-card img { height: 190px; }
 }
+/* -------------------------------
+   풀스크린 검색 UI
+-------------------------------- */
+
+/* 전체 오버레이 */
+#search-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(6px);
+    display: none;
+    align-items: flex-start;
+    justify-content: center;
+    z-index: 9999;
+    transition: background 0.35s ease;
+}
+
+#search-overlay.active {
+    display: flex;
+    background: rgba(0,0,0,0.85); /* 🔥 색상 전환 */
+}
+
+/* 검색 영역 래퍼 */
+.search-inner {
+    width: 90%;
+    max-width: 520px;
+    margin-top: 160px;
+    position: relative;
+    z-index: 1;
+    animation: searchUp 0.35s ease;
+}
+
+/* 🔥 검색창 주변 회색 영역 */
+.search-inner::before {
+    content: "";
+    position: absolute;
+    inset: -40px -30px -80px -30px; /* ← 회색 영역 범위 */
+    background: rgba(0, 0, 0, 0.08);
+    border-radius: 26px;
+    opacity: 0;
+    transition: opacity 0.35s ease, background 0.35s ease;
+    z-index: -1;
+}
+
+#search-overlay.active .search-inner::before {
+    opacity: 1;
+    background: rgba(0, 0, 0, 0.70); /* 🔥 색 전환 */
+}
+
+/* 검색창 등장 애니메이션 */
+@keyframes searchUp {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.search-inner {
+    width: 90%;
+    max-width: 520px;
+    margin-top: 160px;
+    display: flex;
+    flex-direction: column;
+    max-height: 65vh;
+    position: relative;
+}
+
+#search-close {
+    position: absolute;
+    top: -40px;
+    right: 0;
+    background: none;
+    border: none;
+    font-size: 28px;
+    color: #fff;
+    cursor: pointer;
+}
+
+#search-input {
+    padding: 18px 22px;
+    font-size: 20px;
+    border-radius: 14px;
+    border: none;
+    outline: none;
+}
+
+.search-hint {
+    margin-top: 12px;
+    color: #ccc;
+    font-size: 14px;
+}
+
+/* 카테고리 버튼 */
+.search-category {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 16px 0;
+}
+
+.search-category button {
+    padding: 8px 16px;
+    border-radius: 20px;
+    border: 1px solid #aaa;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+}
+
+.search-category button.active {
+    background: #fff;
+    color: #000;
+}
+
+/* 최근 검색어 */
+#recent-keywords {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+#recent-keywords li {
+    color: #bbb;
+    font-size: 14px;
+    cursor: pointer;
+    margin-bottom: 6px;
+}
+.recent-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    color: #aaa;
+    font-size: 14px;
+}
+
+#clear-recent {
+    background: none;
+    border: none;
+    color: #bbb;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+#clear-recent:hover {
+    color: #fff;
+}
+
+#recent-keywords li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+/* 검색 결과 */
+#search-result {
+    flex: 1;
+    overflow-y: auto;
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+#search-result li {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    background: rgba(255,255,255,0.95);
+    padding: 12px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+#search-result img {
+    width: 60px;
+    height: 45px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+#search-result li:hover {
+    background: #000;
+    color: #fff;
+}
+
+/* 모바일 검색 UI */
+@media (max-width: 768px) {
+
+    #search-overlay {
+        align-items: flex-start;
+        padding-top: 80px;
+    }
+
+    .search-inner {
+        max-width: none;
+        width: 100%;
+        padding: 0 16px;
+        margin-top: 0;
+    }
+
+    #search-input {
+        font-size: 18px;
+        padding: 16px;
+        border-radius: 12px;
+    }
+
+    #search-close {
+        top: -45px;
+        right: 10px;
+        font-size: 26px;
+    }
+
+    .search-category {
+        justify-content: flex-start;
+        overflow-x: auto;
+        padding-bottom: 5px;
+    }
+
+    .search-category button {
+        white-space: nowrap;
+        font-size: 13px;
+    }
+
+    #search-result {
+        max-height: calc(100vh - 260px);
+    }
+
+    #search-result li {
+        display: flex;
+        gap: 12px;
+        align-items: center;
+    }
+
+    #search-result img {
+        width: 64px;
+        height: 64px;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+}
