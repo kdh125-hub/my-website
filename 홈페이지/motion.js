@@ -108,7 +108,8 @@ const products = {
                 { img: "헨지3.jpg", name: "(헨지)기본사이즈", price: " " }
             ],
             "K1": [
-                { img: "K1.jpg", name: "(K1)기본사이즈", price: " " }
+                { img: "K1.jpg", name: "(K1)기본사이즈", price: " " },
+                { img: "K12.jpg", name:"(K1)기본사이즈", price:" "}
             ],
             "킹덤": [
                 { img: "킹덤.jpg", name: "(킹덤)기본사이즈", price: " " },
@@ -130,19 +131,19 @@ const products = {
         list: {
             "패밀리 침대 프레임": [
                 { img: "패밀리1.jpg", name: "기본사이즈(Q+SS)", price: " " },
-                { img: "패밀리2.jpg", name: "사이즈", price: " " }
+                /*{ img: "패밀리2.jpg", name: "사이즈", price: " " }*/
             ]
         }
     },
-    additional: {
+   /* additional: {
         categories: ["쿠션"],
         list: {
             "쿠션": [
-                {img: "패밀리2.jpg", name: "사각쿠션", price: " "},
-                {img: "패밀리2.jpg", name: "배게쿠션", price: " "}
+                {img: "cushion.jpg", name: "사각쿠션", price: " "},
+                {img: "cushion2.jpg", name: "배게쿠션", price: " "}
             ]
         }
-    }
+    } */
 };
 
 /* ---------------------------------------
