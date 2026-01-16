@@ -135,15 +135,15 @@ const products = {
             ]
         }
     },
-   /* additional: {
+    additional: {
         categories: ["쿠션"],
         list: {
             "쿠션": [
-                {img: "cushion.jpg", name: "사각쿠션", price: " "},
-                {img: "cushion2.jpg", name: "배게쿠션", price: " "}
+                {img: "쿠션.jpg", name: "사각쿠션", price: " "},
+                /*{img: "cushion2.jpg", name: "배게쿠션", price: " "}*/
             ]
         }
-    } */
+    } 
 };
 
 /* ---------------------------------------
